@@ -11,7 +11,7 @@ const tweetSlice = createSlice({
         getAllTweets: (state, action) => {
             state.tweets = action.payload.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
         },
-        addTweet: (state, action) => {  // ✅ Add new tweet immediately
+        addTweet: (state, action) => {
             state.tweets = [action.payload, ...state.tweets];
         },
         getRefresh: (state) => {
